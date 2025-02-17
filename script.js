@@ -7,7 +7,7 @@ let category = "general";
 
 let requestUrl = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}`;
 
-const categories = ["general", "business", "entertainment", "health", "science", "sports", "technology"];
+const categories = ["General", "Business", "Entertainment", "Health", "Science", "Sports", "Technology"];
 
 const generateUI = (articles) => {
     container.innerHTML = "";

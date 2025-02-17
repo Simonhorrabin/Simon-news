@@ -26,6 +26,7 @@ img{
     width: 100%;
     text-align: center;
     box-shadow: 0 10px 50px 0 rgba(2, 0, 31, .3);
+    z-index: 1;
 
 }
 
@@ -38,7 +39,7 @@ img{
 .options-container {
     margin: 10em 0 2em 0;
     display: flex;
-    flex-wrap: center;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1em;
     text-align: center;
@@ -54,10 +55,82 @@ img{
     border: none;
 }
 
+
+button {
+    padding: 5px;
+    border: none;
+    font-weight: 500px;
+    background: transparent;
+}
+
+button:hover{
+    color: rgb(36, 138, 104);
+}
+
+
 .container {
     width: 90%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1em;
+}
+
+.news-card {
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    box-shadow: 0 0 15px rgba(85, 85, 85, .2);
+    margin: 1em 0;
+    border-radius: 15px;
+    border-color: black;
+}
+
+.news-card img {
+    border-radius: 15px 15px 0 0;
+    border: black;
+
+}
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    font-size: 15px;
+    ;
+}
+
+.news-title {
+    color: #d5d5d5;
+    font-weight: 600;
+}
+
+.news-description {
+    color: #d5d5d5;
+    text-align: center;
+    margin: .8em 0 1em 0;
+}
+
+.view-button {
+    position: relative;
+    text-decoration: none;
+    background-color: rgb(57, 112, 94);
+    color: #d5d5d5;
+    width: 7em;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.active{
+    background-color: rgb(57, 116, 96);
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 768px){
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
 }
